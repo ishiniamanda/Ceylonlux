@@ -365,7 +365,7 @@ if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
             echo "<p>Invalid product ID.</p>";
         }
     }
-} else 
+} else {}
     
 
 
