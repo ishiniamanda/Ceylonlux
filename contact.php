@@ -394,7 +394,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : null; // Get user's name i
                   <span><?php echo htmlspecialchars($user_name); ?></span>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="/Serandi 2/custom-profile.php">Profile</a>
+                <a class="dropdown-item" href="#">Profile</a>
                 <a class="dropdown-item" href="/Serandi 2/logout.php">Logout</a>
                 </div>
               <?php else: ?>
@@ -491,8 +491,15 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : null; // Get user's name i
         <div class="map-container">
             <h4>Find Us Here</h4><br>
             <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.579492610797!2d-122.08410628469035!3d37.42199977982638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb8d37eecf8cf%3A0x709ba679e6ee7040!2sGoogleplex!5e0!3m2!1sen!2sus!4v1638437744105!5m2!1sen!2sus" 
-                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63343.14177094791!2d79.87793780433795!3d6.906043468658228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25927eaa01f87%3A0x355d54d29fa0da6!2sNIBM!5e0!3m2!1sen!2slk!4v1690810046241!5m2!1sen!2slk" 
+    width="100%" 
+    height="300" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+</iframe>
+
             </div>
         </div>
     </div>

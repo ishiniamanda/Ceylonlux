@@ -412,7 +412,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : null; // Get user's name i
                   <span><?php echo htmlspecialchars($user_name); ?></span>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="/Serandi 2/custom-profile.php">Profile</a>
+                <a class="dropdown-item" href="#">Profile</a>
                 <a class="dropdown-item" href="/Serandi 2/logout.php">Logout</a>
                 </div>
               <?php else: ?>

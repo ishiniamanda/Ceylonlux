@@ -445,8 +445,8 @@ $conn->close();
                   <span><?php echo htmlspecialchars($user_name); ?></span>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="/Serandi/Serandi 2/custom-profile.php">Profile</a>
-                <a class="dropdown-item" href="/Serandi/Serandi 2/logout.php">Logout</a>
+                <a class="dropdown-item" href="/Serandi 2/custom-profile.php">Profile</a>
+                <a class="dropdown-item" href="/Serandi 2/logout.php">Logout</a>
                 </div>
               <?php else: ?>
                 <!-- Show login only for non-logged-in users -->
@@ -455,7 +455,7 @@ $conn->close();
                   <i class="fas fa-user fa-lg"></i>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="/Serandi/Serandi 2/login.php">Login</a>
+                  <a class="dropdown-item" href="/Serandi 2/login.php">Login</a>
                 </div>
               <?php endif; ?>
             </div>
