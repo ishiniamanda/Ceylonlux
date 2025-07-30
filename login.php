@@ -364,8 +364,8 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : null; // Get user's name i
                   <span><?php echo htmlspecialchars($user_name); ?></span>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="/Serandi/Serandi 2/custom-profile.php">Profile</a>
-                <a class="dropdown-item" href="/Serandi/Serandi 2/logout.php">Logout</a>
+                <a class="dropdown-item" href="/Serandi 2/custom-profile.php">Profile</a>
+                <a class="dropdown-item" href="/Serandi 2/logout.php">Logout</a>
                 </div>
               <?php else: ?>
                 <!-- Show login only for non-logged-in users -->
@@ -374,7 +374,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : null; // Get user's name i
                   <i class="fas fa-user fa-lg"></i>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="/Serandi/Serandi 2/login.php">Login</a>
+                  <a class="dropdown-item" href="/Serandi 2/login.php">Login</a>
                 </div>
               <?php endif; ?>
             </div>
@@ -461,7 +461,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : null; // Get user's name i
               <li><a href="#">Collections</a></li>
               <li><a href="#">Blog</a></li>
               <li><a href="#">Shop</a></li>
-              <li><a href="/Serandi/Serandi 2/faqs.php">Customer Care</a></li>
+              <li><a href="/Serandi 2/faqs.php">Customer Care</a></li>
             </ul>
           </div>
           <div class="col-lg-4 col-md-6 mb-4 contact-info-container" style="margin-left:-10px;">

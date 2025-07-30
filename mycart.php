@@ -630,7 +630,7 @@ $subtotal = $price * $quantity;                                $totalAmount += $
                       <span class="value">$ <?php echo number_format($finalAmount, 2); ?></span>
                   </li>
             </ul>
-            <button class="checkout-btn" ><a href="/Serandi 2/checkout.php">PROCEED TO CHECKOUT <a><i class="fa-solid fa-greater-than"></i></button>
+            <button class="checkout-btn" ><a href="#">PROCEED TO CHECKOUT <a><i class="fa-solid fa-greater-than"></i></button>
         </div>
 </div>
         
