@@ -539,8 +539,9 @@ $conn->close();
                     if (!empty($cart)) {
                         foreach ($cart as $item) {
                             if (isset($item['id'])) {
-                                $subtotal = $item['price'] * $item['quantity'];
-                                $totalAmount += $subtotal; // Add subtotal to total amount
+$price = (float) preg_replace('/[^\d.]/', '', $item['price']);
+$quantity = (int) $item['quantity'];
+$subtotal = $price * $quantity;                                $totalAmount += $subtotal; // Add subtotal to total amount
 
                                 echo '
                                     <tr>
@@ -548,7 +549,8 @@ $conn->close();
                                             <img src="' . htmlspecialchars($item['image']) . '" alt="Product Image" class="product-img">
                                             <span class="product-name">' . htmlspecialchars($item['name']) . '</span>
                                         </td>
-                                        <td>$ ' . number_format($item['price'], 2) . ' <br> </td>
+                                        <td>$ ' . number_format((float)$item['price'], 2) . ' <br> </td>
+
                                         <td>
                                             <div class="quantity-box">
                                                 <form method="POST" class="quantity-form" data-product-id="' . htmlspecialchars($item['id']) . '">
@@ -641,50 +643,55 @@ $conn->close();
             <h2>You May Also Like</h2>
             <div class="line2"></div>
             <div class="row">
-            <?php
-        
+           <?php
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-        $sql = "SELECT * FROM product ORDER BY id DESC LIMIT 3";
-        $result = $conn->query($sql);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $Productname = htmlspecialchars($row['Productname']);
-                $Category = htmlspecialchars($row['Category']);
-                $Material = htmlspecialchars($row['Material']);
-                $Gemstone = htmlspecialchars($row['Gemstone']);
-                $Weight = htmlspecialchars($row['Weight']);
-                $Price = htmlspecialchars($row['Price']);
-                $Description = htmlspecialchars($row['Description']);
-                $image = 'php/uploads/product/' . htmlspecialchars($row['image']);
-                $ProductID = htmlspecialchars($row['id']);
+$sql = "SELECT * FROM product ORDER BY id DESC LIMIT 3";
+$result = $conn->query($sql);
 
-                echo '
-                <div class="col-md-4">
-                    <div class="card h-100  p-2" data-price="' . $Price . '" style="min-height: 350px;">
-                        <img src="' . $image . '" class="card-img-top" alt="' . $Productname . '" style="width: 100%; height: 200px; object-fit: cover;">
-                        <div class="card-body">
-                            <p class="card-text small">' . $Gemstone . '</p>
-                            <h6 class="card-title font-weight-bold mb-2">' . $Productname . '</h6>
-                            <p class="card-price  font-weight-bold mb-2">$' . $Price . '</p>
-                            <p class="card-description small text-muted mb-2">' . $Description . '</p>
-                              <form action="addtocart.php" method="POST">
-                                  <input type="hidden" name="id" value="' . $ProductID . '">
-                                  <input type="hidden" name="product_name" value="' . $Productname . '">
-                                  <input type="hidden" name="price" value="' . $Price . '">
-                                  <input type="hidden" name="image" value="' . $image . '">
-                                  <button type="submit" class="add-to-cart">Add to Cart</button>
-                              </form>
-                        </div>
-                    </div>
-                </div>';
-            }
-        } else {
-            echo "<p>No products found.</p>";
-        }
+if ($result && $result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $Productname = htmlspecialchars($row['Productname']);
+        $Category = htmlspecialchars($row['Category']);
+        $Material = htmlspecialchars($row['Material']);
+        $Gemstone = htmlspecialchars($row['Gemstone']);
+        $Weight = htmlspecialchars($row['Weight']);
+        $Price = htmlspecialchars($row['Price']);
+        $Description = htmlspecialchars($row['Description']);
+        $image = 'php/uploads/product/' . htmlspecialchars($row['image']);
+        $ProductID = htmlspecialchars($row['id']);
 
-        $conn->close();
-        ?>
+        echo '
+        <div class="col-md-4">
+            <div class="card h-100  p-2" data-price="' . $Price . '" style="min-height: 350px;">
+                <img src="' . $image . '" class="card-img-top" alt="' . $Productname . '" style="width: 100%; height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <p class="card-text small">' . $Gemstone . '</p>
+                    <h6 class="card-title font-weight-bold mb-2">' . $Productname . '</h6>
+                    <p class="card-price  font-weight-bold mb-2">$' . $Price . '</p>
+                    <p class="card-description small text-muted mb-2">' . $Description . '</p>
+                    <form action="addtocart.php" method="POST">
+                        <input type="hidden" name="id" value="' . $ProductID . '">
+                        <input type="hidden" name="product_name" value="' . $Productname . '">
+                        <input type="hidden" name="price" value="' . $Price . '">
+                        <input type="hidden" name="image" value="' . $image . '">
+                        <button type="submit" class="add-to-cart">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
+        </div>';
+    }
+} else {
+    echo "<p>No products found.</p>";
+}
+
+$conn->close();
+?>
+
 
     </div>
         </div>

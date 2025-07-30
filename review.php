@@ -28,7 +28,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $imageFileType = strtolower(pathinfo($imageFile, PATHINFO_EXTENSION));
 
         // Check if file is an image
-        $check = getimagesize($tmp_name);
+        $check = getimagesize($tmp_name);if (!empty($tmp_name) && is_uploaded_file($tmp_name)) {
+    $check = getimagesize($tmp_name);
+    if ($check === false) {
+        echo "<script>alert('File {$fileName} is not an image.');</script>";
+        $uploadOk = 0;
+        continue;
+    }
+} else {
+    echo "<script>alert('No file uploaded for {$fileName}.');</script>";
+    $uploadOk = 0;
+    continue;
+}
+
         if ($check === false) {
             echo "<script>alert('File {$fileName} is not an image.');</script>";
             $uploadOk = 0;
@@ -63,8 +75,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $uploadedFilesJson = json_encode($uploadedFiles); 
 
         // Prepare the SQL statement to insert the review into the database
-        $stmt = $conn->prepare("INSERT INTO review (product_id, name, review, imagePath, rating) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("isssi", $product_id, $name, $review, $uploadedFilesJson, $rating);
+$stmt = $conn->prepare("INSERT INTO review (name, review) VALUES (?, ?)");
+$stmt->bind_param("ss", $name, $review);
         
         // Execute the query
         if ($stmt->execute()) {
