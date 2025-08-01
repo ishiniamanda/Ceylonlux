@@ -431,7 +431,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : null; // Get user's name i
     <div class="row mt-5 align-items-center text-center">
       <!-- Text Block -->
       <div class="col-lg-6 text-center text-lg-center">
-        <img src="Images/logo.svg" alt="" style="max-width: 300px;">
+        <img src="Images/logo-2.svg" alt="" style="max-width: 300px;">
         <p class="text-center-para">Welcome to our Custom Jewelry Service, where your vision meets our expertise! We
           specialize in
           creating breathtaking, personalized pieces that perfectly capture your style and story. </p>
@@ -575,8 +575,8 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : null; // Get user's name i
           <ul class="footer-contact">
             <li><i class="fas fa-phone rotated-phone"></i> 011-1231234</li>
             <li><i class="fas fa-phone rotated-phone"></i> 011-1231234</li>
-            <li><i class="fas fa-envelope"></i> serendiM@gmail.com</li>
-            <li><i class="fas fa-map-marker-alt"></i> Colombo 3, Sri Lanka</li>
+            <li><i class="fas fa-envelope"></i>ceylonluxe@gmail.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Colombo 7, Sri Lanka</li>
           </ul>
         </div>
 

@@ -499,7 +499,6 @@ $conn->close();
 
           <form method="POST" action="">
          <input type="hidden" name="product_id" value="<?php echo htmlspecialchars($ProductID); ?>"> <!-- Ensure $ProductID is set -->
-         <button type="submit">View Reviews</button>
          </form>
       </div>
 <!-- Modal Structure -->
@@ -661,8 +660,8 @@ $conn->close(); // Close the database connection
           <ul class="footer-contact">
             <li><i class="fas fa-phone rotated-phone"></i> 011-1231234</li>
             <li><i class="fas fa-phone rotated-phone"></i> 011-1231234</li>
-            <li><i class="fas fa-envelope"></i> serendiM@gmail.com</li>
-            <li><i class="fas fa-map-marker-alt"></i> Colombo 3, Sri Lanka</li>
+            <li><i class="fas fa-envelope"></i> ceylonluxe@gmail.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Colombo 7, Sri Lanka</li>
           </ul>
         </div>
 

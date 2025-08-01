@@ -461,7 +461,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : null; // Get user's name i
 
 
   <div class="content-container">
-    <img src="Images/logo.svg" alt="Description of image" class="image" style="width:300px">
+    <img src="Images/logo-2.svg" alt="Description of image" class="image" style="width:300px">
     <div class="text-content">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -602,7 +602,7 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : null; // Get user's name i
 
     <!-- Text Block -->
     <div class="col-lg-6 text-center text-lg-center">
-      <img src="Images/logo.svg" alt="" style="width:300px">
+      <img src="Images/logo-2.svg" alt="" style="width:300px">
       <p>Discover the unparalleled elegance of Serendi co, a pioneering name in Sri Lanka's jewellery scene since
         1962. Renowned for exquisite craftsmanship and premium quality. </p>
       <a href="about.php" class="text-center-btn ">Read More</a>
@@ -727,8 +727,8 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : null; // Get user's name i
           <ul class="footer-contact">
             <li><i class="fas fa-phone rotated-phone"></i> 011-1231234</li>
             <li><i class="fas fa-phone rotated-phone"></i> 011-1231234</li>
-            <li><i class="fas fa-envelope"></i> serendiM@gmail.com</li>
-            <li><i class="fas fa-map-marker-alt"></i> Colombo 3, Sri Lanka</li>
+            <li><i class="fas fa-envelope"></i> ceylonluxe@gmail.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Colombo 7, Sri Lanka</li>
           </ul>
         </div>
 

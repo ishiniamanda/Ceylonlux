@@ -473,8 +473,8 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : null; // Get user's name i
                     <div class="card-body">
                         <h4><b>Contact Information</b></h4><br>
                         <p>Phone: 011-1231234</p>
-                        <p>Email: serendiM@gmail.com</p>
-                        <p>Address: Colombo 3, Sri Lanka</p><br>
+                        <p>Email: ceylonluxe@gmail.com</p>
+                        <p>Address: Colombo 7, Sri Lanka</p><br>
                         <h5><b>Follow Us</b></h5><br>
                         <div class="social-media1">
                             <a href="https://www.facebook.com" id="facebookIcon" class="social-icon"><img src="images/facebook.png" alt="Facebook"></a>
@@ -526,8 +526,8 @@ $user_name = $is_logged_in ? $_SESSION['user_name'] : null; // Get user's name i
           <ul class="footer-contact">
             <li><i class="fas fa-phone rotated-phone"></i> 011-1231234</li>
             <li><i class="fas fa-phone rotated-phone"></i> 011-1231234</li>
-            <li><i class="fas fa-envelope"></i> serendiM@gmail.com</li>
-            <li><i class="fas fa-map-marker-alt"></i> Colombo 3, Sri Lanka</li>
+            <li><i class="fas fa-envelope"></i> ceylonluxe@gmail.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Colombo 7, Sri Lanka</li>
           </ul>
         </div>
 
